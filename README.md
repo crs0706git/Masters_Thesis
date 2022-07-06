@@ -16,7 +16,7 @@ The overall flow is described as follows:
   - https://github.com/karolpiczak/ESC-50
 
 # 0. Preprocessings
-Codes:
+Code:
 - 0_make_esc10.py
 - 0_rename_files.py
 - 0_txt_div.py
@@ -77,7 +77,7 @@ Note: The code also includes audio downsampling.
 To precisely and easily browse the information of the mixture information, the CSV file was used. Using the same method of mixing (as 0_2mix_norm_vol.py), the following code writes on a CSV file about what each mixture audio is consists of and whether it is associated to train, validation, or test dataset based on the dataset division on the single-label dataset. For example, if the mixture audio is mixed with only the training files, then it is considered a training file. Else if the mixture audio is mixed with the different sets, like training and testing files, then it is not used. The corresponding division is based on the set number and the distributed set (train/validation/test).
 
 # 1. Audio Source Counter (ASC)
-Codes:
+Code:
 - asc_model.py
 - UNet_utils.py
 - audio_source_counter.py
@@ -144,7 +144,7 @@ Process:
 - Can select the option of testing unselected multi-label audio files, to verify whether the model can deal with the untrained files.
 
 # 2. Classifier
-Codes:
+Code:
 - CNN_ISOCC_copy.py
 - sep_opt_isocc_single_volnorm_STFT.py / sep_opt_isocc_multi_random_volnorm_STFT.py
 
@@ -159,14 +159,14 @@ The overall structure is described as follows:
 The model is in simple CNN structure. For classifying audio, CNN structure distinguishes the label(s) associated to the input audio well enough.
 
 ## sep_opt_isocc_single_volnorm_STFT.py / sep_opt_isocc_multi_random_volnorm_STFT.py
-The following codes train and test with the model for classifying label(s) of the input audio. <br/>
+The following code train and test with the model for classifying label(s) of the input audio. <br/>
 - sep_opt_isocc_single_volnorm_STFT.py <br/>
   The following code trains and tests the 1-class label classifier.
 - sep_opt_isocc_multi_random_volnorm_STFT.py <br/>
   The following code trains and tests the 2-class label classifier.
 
 # 9. Utilities
-Codes:
+Code:
 - crs_lib.py
 - tmr.py
 
